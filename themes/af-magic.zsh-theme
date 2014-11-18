@@ -21,13 +21,13 @@ eval my_orange='$FG[214]'
 # right prompt
 if type "virtualenv_prompt_info" > /dev/null
 then
-	RPROMPT='$(virtualenv_prompt_info)$my_gray%n@%m%{$reset_color%}%'
+	RPROMPT='$(virtualenv_prompt_info)%{$reset_color%}'
 else
-	RPROMPT='$my_gray%n@%m%{$reset_color%}%'
+	RPROMPT='%{$reset_color%}'
 fi
 
 # git settings
-ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075](branch:"
+ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075](:"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 ZSH_THEME_GIT_PROMPT_DIRTY="$my_orange*%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="$FG[075])%{$reset_color%}"
